@@ -3,6 +3,10 @@
   "type": "module",
   "version": "4.0.0",
   "description": "A calendar and date picker plugin for Vue.js.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "contributors": [
     {
       "name": "Craig Riley",
