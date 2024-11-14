@@ -65,7 +65,7 @@ export function createViteConfig(format: BuildFormat): InlineConfig {
         fileName: () => 'index.js',
         formats: [isNode ? 'es' : format],
         // Only for iife/umd
-        name: 'VCalendar',
+        name: 'EvoCalendar',
       },
       rollupOptions: isNode
         ? { ...rollupOptions, ...rollupMjsBuildOptions }
@@ -95,7 +95,7 @@ export function createViteConfig(format: BuildFormat): InlineConfig {
     config.plugins!.push(
       visualizer({
         filename: 'dist/stats.html',
-        title: 'V-Calendar Visualizer',
+        title: 'Evo Calendar Visualizer',
       }),
     );
   }

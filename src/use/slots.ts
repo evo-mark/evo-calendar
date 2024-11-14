@@ -1,4 +1,4 @@
-import { type SetupContext, inject, provide } from 'vue';
+import { type SetupContext, type Slot, inject, provide } from 'vue';
 
 type Slots = SetupContext['slots'];
 
@@ -12,6 +12,6 @@ export function provideSlots(slots: Slots, remap: Record<string, string> = {}) {
   });
 }
 
-export function useSlot(slotKey: string) {
+export function useSlot(slotKey: string): Slot | null {
   return inject(contextKey(slotKey), null);
 }

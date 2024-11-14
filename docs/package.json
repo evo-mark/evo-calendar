@@ -10,18 +10,18 @@
     "serve": "vitepress serve"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.6",
+    "@popperjs/core": "^2.11.8",
     "lodash": "^4.17.21",
-    "short-uuid": "^4.2.0",
-    "vue-screen-utils": "^1.0.0-beta.13"
+    "short-uuid": "^4.2.2",
+    "vue-screen-utils": "1.0.0-beta.13"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.2",
-    "@tailwindcss/typography": "^0.5.4",
-    "autoprefixer": "^10.4.8",
-    "postcss": "^8.4.16",
-    "tailwindcss": "^3.1.8",
-    "vitepress": "^1.0.0-alpha.59",
-    "vue": "^3.2.37"
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.14",
+    "vitepress": "^1.5.0",
+    "vue": "^3.5.12"
   }
 }

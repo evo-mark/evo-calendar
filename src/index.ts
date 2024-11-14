@@ -4,7 +4,7 @@ import './styles/index.css';
 import { setVueInstance } from './utils/config/index';
 import { type Defaults, setupDefaults } from './utils/defaults';
 
-const install = (app: App, defaults: Defaults = {}) => {
+const InstallEvoCalendar = (app: App, defaults: Defaults = {}) => {
   setVueInstance(app);
   app.use(setupDefaults, defaults);
   const prefix = app.config.globalProperties.$VCalendar.componentPrefix;
@@ -14,7 +14,7 @@ const install = (app: App, defaults: Defaults = {}) => {
   }
 };
 
-export default { install };
+export { InstallEvoCalendar };
 export * from './components';
 export { setupDefaults as setupCalendar } from './utils/defaults';
 export { popoverDirective } from './utils/popovers';

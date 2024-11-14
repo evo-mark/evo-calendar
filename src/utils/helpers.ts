@@ -1,22 +1,26 @@
-import _has from 'lodash/has';
-import _isDate from 'lodash/isDate';
-import isFunction from 'lodash/isFunction';
-import isString from 'lodash/isString';
-import _some from 'lodash/some';
+import {
+  has,
+  isDate as _isDate,
+  isFunction,
+  isString,
+  some as _some,
+} from 'lodash-es';
 import type { ComponentPublicInstance } from 'vue';
 
 export { isFunction, isString };
-export { default as isBoolean } from 'lodash/isBoolean';
-export { default as isNumber } from 'lodash/isNumber';
-export { default as isUndefined } from 'lodash/isUndefined';
-export { default as get } from 'lodash/get';
-export { default as set } from 'lodash/set';
-export { default as mapValues } from 'lodash/mapValues';
-export { default as defaults } from 'lodash/defaults';
-export { default as defaultsDeep } from 'lodash/defaultsDeep';
-export { default as map } from 'lodash/map';
-export { default as head } from 'lodash/head';
-export { default as last } from 'lodash/last';
+export {
+  isBoolean,
+  isNumber,
+  isUndefined,
+  get,
+  set,
+  mapValues,
+  defaults,
+  defaultsDeep,
+  map,
+  head,
+  last,
+} from 'lodash-es';
 
 // Type checkers
 export const getType = (value: any) =>
@@ -27,9 +31,8 @@ export const isObject = (value: unknown): value is Object =>
   getType(value) === 'Object';
 
 // Object utils
-export const has = _has;
 export const hasAny = (obj: object, props: string[]) =>
-  _some(props, p => _has(obj, p));
+  _some(props, p => has(obj, p));
 
 // Collection utils
 export const some = _some;
@@ -167,4 +170,5 @@ export function hash(str: string): number {
   return hashcode;
 }
 
+export { has };
 /* eslint-enable no-bitwise */
