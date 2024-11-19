@@ -1,4 +1,20 @@
-# VCalendar Plugin for Vue 3
+<p align="center">
+    <a href="https://evomark.co.uk" target="_blank" alt="Link to evoMark's website">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://evomark.co.uk/wp-content/uploads/static/evomark-logo--dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="https://evomark.co.uk/wp-content/uploads/static/evomark-logo--light.svg">
+          <img alt="evoMark company logo" src="https://evomark.co.uk/wp-content/uploads/static/evomark-logo--light.svg" width="500">
+        </picture>
+    </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/npm/dm/@evomark/evo-calendar.svg" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/@evomark/evo-calendar"><img src="https://img.shields.io/npm/v/@evomark/evo-calendar.svg" alt="Version"></a>
+  <a href="https://github.com/evo-mark/evo-calendar/blob/main/LICENCE"><img src="https://img.shields.io/github/license/evo-mark/evo-calendar?style=flat" alt="Licence"></a>
+</p>
+
+# Evo Calendar for Vue 3
 
 A calendar and date picker plugin for [Vue.js](https://vuejs.org).
 
@@ -9,31 +25,31 @@ A calendar and date picker plugin for [Vue.js](https://vuejs.org).
 ### NPM
 
 ```shell
-npm install v-calendar@next @popperjs/core
+npm install @evomark/evo-calendar @popperjs/core
 ```
 
 ### Yarn
 
 ```shell
-yarn add v-calendar@next @popperjs/core
+yarn add @evomark/evo-calendar @popperjs/core
 ```
 
 ## Use Plugin
 
-:warning: **As of `v3.0.0-alpha.7`, all installation methods require manual import of component styles. This is due to Vite build restrictions in libary mode.**
+:warning: **All installation methods require manual import of component styles. This is due to Vite build restrictions in libary mode.**
 
 ```js
-import 'v-calendar/style.css';
+import '@evomark/evo-calendar/style.css';
 ```
 
 ### Method 1: Use Globally
 
 ```js
-import VCalendar from 'v-calendar';
-import 'v-calendar/style.css';
+import { InstallEvoCalendar } from '@evomark/evo-calendar';
+import '@evomark/evo-calendar/style.css';
 
 // Use plugin with optional defaults
-app.use(VCalendar, {})
+app.use(InstallEvoCalendar, {})
 ```
 
 ```html
@@ -48,8 +64,8 @@ app.use(VCalendar, {})
 
 ```js
 // main.js
-import { setupCalendar, Calendar, DatePicker } from 'v-calendar';
-import 'v-calendar/style.css';
+import { setupCalendar, Calendar, DatePicker } from '@evomark/evo-calendar';
+import '@evomark/evo-calendar/style.css';
 
 // Use plugin defaults (optional)
 app.use(setupCalendar, {})
@@ -80,18 +96,18 @@ app.use(setupCalendar, {})
 ```vue
 <!-- MyComponent.vue -->
 <template>
-  <Calendar />
-  <DatePicker v-model="date">
+  <EvoCalendar />
+  <EvoDatePicker v-model="date">
 </template>
 
 <script>
-import { Calendar, DatePicker } from 'v-calendar';
-import 'v-calendar/style.css';
+import { EvoCalendar, EvoDatePicker } from '@evomark/evo-calendar';
+import '@evomark/evo-calendar/style.css';
 
 export default {
   components: {
-    Calendar,
-    DatePicker,
+    EvoCalendar,
+    EvoDatePicker,
   },
   data() {
     return {
@@ -109,10 +125,10 @@ Please follow below mentioned steps to clone and build this project:
 ### Clone the repo
 
 ```sh
-git clone https://github.com/nathanreyes/v-calendar
+git clone https://github.com/evo-mark/evo-calendar
 
 # Move to directory
-cd v-calendar
+cd evo-calendar
 ```
 
 ### Install dependencies
