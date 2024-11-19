@@ -87,7 +87,7 @@ app.component('VDatePicker', DatePicker)
 
 ```js
 // main.js
-import { setupCalendar } from 'v-calendar';
+import { setupCalendar } from '@evomark/evo-calendar';
 
 // Use calendar defaults (optional)
 app.use(setupCalendar, {})
