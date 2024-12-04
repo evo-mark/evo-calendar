@@ -401,7 +401,7 @@ export default defineComponent({
 	border-radius: var(--vc-rounded-lg);
 	padding: 4px;
 	outline: none;
-	z-index: 10;
+	z-index: 9999;
 	box-shadow: var(--vc-shadow-lg);
 	&.direction-bottom {
 		margin-top: var(--popover-vertical-content-offset);
