@@ -1,5 +1,5 @@
 <template>
-  <slot />
+	<slot />
 </template>
 
 <script setup lang="ts">
@@ -8,7 +8,7 @@ import { createPage } from '../../use/page';
 import type { Page } from '../../utils/page';
 
 const props = defineProps<{
-  page: Page;
+	page: Page;
 }>();
 
 createPage(toRef(props, 'page'));

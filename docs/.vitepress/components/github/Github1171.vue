@@ -3,19 +3,19 @@
     <label for="one-way"
       ><input
         id="one-way"
+        v-model="oneWay"
         class="mr-1"
         type="radio"
         :value="true"
-        v-model="oneWay"
       />One way</label
     >
     <label for="round-trip"
       ><input
         id="round-trip"
+        v-model="oneWay"
         class="mr-1"
         type="radio"
         :value="false"
-        v-model="oneWay"
       />
       Round trip</label
     >

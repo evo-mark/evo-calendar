@@ -6,11 +6,11 @@
       <span class="text-sm font-bold">+11:00</span>
     </div>
     <input
+      v-model="timezoneIndex"
       class="w-full focus:outline-none"
       type="range"
       min="0"
-      :max="timezones.length - 1"
-      v-model="timezoneIndex"
+      :max="timeZones.length - 1"
     />
     <div class="flex font-semibold space-x-2">
       <span class="text-gray-600 dark:text-gray-400">Timezone:</span>
@@ -23,23 +23,26 @@
 import { ref, computed } from 'vue';
 
 const props = defineProps({
-  modelValue: String,
+  modelValue: {
+    type: String,
+    default: ""
+  },
 });
 
 const emit = defineEmits(['update:modelValue']);
 
 const timezoneIndex = computed({
   get() {
-    return timezones.value.findIndex(
+    return timeZones.value.findIndex(
       s => s.toLowerCase() === props.modelValue.toLowerCase(),
     );
   },
   set(val) {
-    emit('update:modelValue', timezones.value[val]);
+    emit('update:modelValue', timeZones.value[val]);
   },
 });
 
-const timezones = ref([
+const timeZones = ref([
   'Pacific/Niue', // -11
   'US/Hawaii', // -10
   'America/Anchorage', // -9

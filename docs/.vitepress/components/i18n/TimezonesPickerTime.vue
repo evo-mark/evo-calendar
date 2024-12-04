@@ -1,6 +1,6 @@
 <template>
   <Example centered>
-    <DateDisplay mode="dateTime" v-model.range="range" :timezone="timezone">
+    <DateDisplay v-model.range="range" mode="dateTime" :timezone="timezone">
       <template #header>
         <TimezonePicker v-model="timezone" />
       </template>

@@ -14,7 +14,7 @@
       v-if="showDarkMode"
       class="flex justify-center items-center space-x-2 pt-2"
     >
-      <input id="darkmode" type="checkbox" v-model="isDark" />
+      <input id="darkmode" v-model="isDark" type="checkbox" />
       <label for="darkmode"> Dark Mode </label>
     </div>
   </div>

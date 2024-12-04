@@ -6,8 +6,8 @@
           Using my own content now
         </div>
         <div
-          class="text-xs text-gray-700 dark:text-gray-300 font-semibold text-center"
           v-else-if="step >= 2"
+          class="text-xs text-gray-700 dark:text-gray-300 font-semibold text-center"
         >
           {{ dayTitle }}
         </div>

@@ -2,7 +2,7 @@
   <Example centered>
     <div class="space-y-2">
       <div class="flex items-center space-x-2">
-        <input id="darkmode" type="checkbox" v-model="isDark" />
+        <input id="darkmode" v-model="isDark" type="checkbox" />
         <label for="darkmode"> Dark Mode </label>
       </div>
       <VCalendar :is-dark="isDark" />

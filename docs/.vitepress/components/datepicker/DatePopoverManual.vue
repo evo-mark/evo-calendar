@@ -12,8 +12,8 @@
         </button>
         <input
           :value="inputValue"
-          v-on="inputEvents"
           class="flex-grow px-2 py-1 bg-white dark:bg-gray-700"
+          v-on="inputEvents"
         />
       </div>
     </template>

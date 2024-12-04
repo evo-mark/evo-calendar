@@ -1,8 +1,8 @@
 <template>
   <VCalendar
+    ref="calendar"
     view="weekly"
     :attributes="attrs"
-    ref="calendar"
     title-position="left"
     :masks="masks"
     :bordered="false"

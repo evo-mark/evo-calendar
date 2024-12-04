@@ -18,7 +18,7 @@ async function executeBuild() {
   }
 
   // Copy css to root
-  fs.copyFileSync('dist/es/style.css', 'dist/style.css');
+  fs.copyFileSync('dist/es/evo-calendar.css', 'dist/style.css');
 }
 
 executeBuild();

@@ -1,17 +1,17 @@
 <template>
-  <CalendarCell
-    :cell="cell"
-    :class="[
-      'is-2xs',
-      `is-${fill}`,
-      {
-        'is-2xs': true,
-        'has-start': hasStart,
-        'has-end': hasEnd,
-      },
-    ]"
-    :style="style"
-  />
+	<CalendarCell
+		:cell="cell"
+		:class="[
+			'is-2xs',
+			`is-${fill}`,
+			{
+				'is-2xs': true,
+				'has-start': hasStart,
+				'has-end': hasEnd,
+			},
+		]"
+		:style="style"
+	/>
 </template>
 
 <script setup lang="ts">
@@ -22,9 +22,9 @@ import { DateRangeCell } from '../../utils/date/range';
 import CalendarCell from './CalendarCell.vue';
 
 const props = defineProps<{
-  cell: DateRangeCell<Event>;
-  minDayIndex: number;
-  maxDayIndex: number;
+	cell: DateRangeCell<Event>;
+	minDayIndex: number;
+	maxDayIndex: number;
 }>();
 
 const { isMonthly } = useCalendarGrid();
@@ -34,19 +34,16 @@ const hasStart = computed(() => props.minDayIndex <= props.cell.startDay);
 const hasEnd = computed(() => props.maxDayIndex >= props.cell.endDay);
 
 const fill = computed(() => {
-  if (isMonthly.value && !event.value.isWeekly) return 'transparent';
-  return event.value.fill;
+	if (isMonthly.value && !event.value.isWeekly) return 'transparent';
+	return event.value.fill;
 });
 
 const style = computed(() => {
-  const gridColumnStart = Math.max(
-    props.cell.startDay - props.minDayIndex + 1,
-    1,
-  );
-  const gridColumnEnd = Math.min(props.cell.endDay - props.maxDayIndex - 1, -1);
-  return {
-    gridColumnStart,
-    gridColumnEnd,
-  };
+	const gridColumnStart = Math.max(props.cell.startDay - props.minDayIndex + 1, 1);
+	const gridColumnEnd = Math.min(props.cell.endDay - props.maxDayIndex - 1, -1);
+	return {
+		gridColumnStart,
+		gridColumnEnd,
+	};
 });
 </script>

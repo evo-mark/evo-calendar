@@ -1,9 +1,11 @@
-/** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors');
+import colors from 'tailwindcss/colors';
+import forms from "@tailwindcss/forms";
+import typography from "@tailwindcss/typography";
 
 delete colors.lightBlue;
 
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: ['./.vitepress/**/*.{js,ts,vue}', './**/*.md'],
   darkMode: 'class',
   theme: {
@@ -17,5 +19,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography', '@tailwindcss/forms')],
+  plugins: [typography(), forms()],
 };

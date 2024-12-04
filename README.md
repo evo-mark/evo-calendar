@@ -36,7 +36,7 @@ yarn add @evomark/evo-calendar @popperjs/core
 
 ## Use Plugin
 
-:warning: **All installation methods require manual import of component styles. This is due to Vite build restrictions in libary mode.**
+:warning: **All installation methods require manual import of component styles. This is due to Vite build restrictions in library mode.**
 
 ```js
 import '@evomark/evo-calendar/style.css';

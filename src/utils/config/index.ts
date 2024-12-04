@@ -7,5 +7,5 @@ export { config as default };
 export let VueInstance: Application;
 
 export const setVueInstance = (instance: Application) => {
-  VueInstance = instance;
+	VueInstance = instance;
 };

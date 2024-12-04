@@ -5,34 +5,34 @@
       <div class="ml-2">
         <label for="numMonths" class="flex items-center">
           <input
-            type="radio"
             id="numMonths"
-            value="numMonths"
             v-model="moveBy"
+            type="radio"
+            value="numMonths"
           /><span class="ml-1">By number of months</span></label
         >
         <label for="toMonth" class="flex items-center">
           <input
-            type="radio"
             id="toMonth"
-            value="toMonth"
             v-model="moveBy"
+            type="radio"
+            value="toMonth"
           /><span class="ml-1">To month</span></label
         >
         <label for="toDate" class="flex items-center">
           <input
-            type="radio"
             id="toDate"
-            value="toDate"
             v-model="moveBy"
+            type="radio"
+            value="toDate"
           /><span class="ml-1">To date</span></label
         >
         <label for="toDateFocus" class="flex items-center">
           <input
-            type="radio"
             id="toDateFocus"
-            value="toDateFocus"
             v-model="moveBy"
+            type="radio"
+            value="toDateFocus"
           /><span class="ml-1">To date and focus</span></label
         >
       </div>
@@ -60,12 +60,12 @@
           />
         </div>
         <span
-          class="inline-block w-4 h-4 bg-green-400 rounded-full ml-4"
           v-if="transitioning"
+          class="inline-block w-4 h-4 bg-green-400 rounded-full ml-4"
         />
         <span
-          class="inline-block w-4 h-4 bg-gray-300 rounded-full ml-4"
           v-else
+          class="inline-block w-4 h-4 bg-gray-300 rounded-full ml-4"
         />
       </label>
     </div>
@@ -115,8 +115,8 @@
       </div>
       <div class="flex justify-center">
         <VCalendar
-          :rows="2"
           ref="calendar"
+          :rows="2"
           :transition="transition"
           @transition-start="transitioning = true"
           @transition-end="transitioning = false"

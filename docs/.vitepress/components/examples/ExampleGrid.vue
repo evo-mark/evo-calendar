@@ -1,8 +1,8 @@
 <template>
   <div class="py-6">
     <CalendarGrid
-      :events="events"
       v-model:view="view"
+      :events="events"
       show-weeknumbers
       @event-create-begin="onEventCreateBegin"
       @event-create-end="onEventCreateEnd"

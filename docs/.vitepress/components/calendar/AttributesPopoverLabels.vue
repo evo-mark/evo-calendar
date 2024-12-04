@@ -1,9 +1,9 @@
 <template>
   <Example centered>
-    <div class="text-lg font-semibold mb-2 mt-0" v-if="visibility === 'focus'">
+    <div v-if="visibility === 'focus'" class="text-lg font-semibold mb-2 mt-0">
       Focus
     </div>
-    <div class="text-lg font-semibold mb-2 mt-0" v-if="visibility === 'click'">
+    <div v-if="visibility === 'click'" class="text-lg font-semibold mb-2 mt-0">
       Click
     </div>
     <VCalendar :attributes="attributes" />

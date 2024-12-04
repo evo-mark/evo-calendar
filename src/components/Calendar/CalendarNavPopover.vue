@@ -1,16 +1,13 @@
 <template>
-  <Popover
-    :id="navPopoverId"
-    :class="['vc-nav-popover-container', `vc-${color}`, `vc-${displayMode}`]"
-  >
-    <template #default="{ data }">
-      <CalendarPageProvider :page="data.page">
-        <CalendarSlot name="nav">
-          <CalendarNav />
-        </CalendarSlot>
-      </CalendarPageProvider>
-    </template>
-  </Popover>
+	<Popover :id="navPopoverId" :class="['vc-nav-popover-container', `vc-${color}`, `vc-${displayMode}`]">
+		<template #default="{ data }">
+			<CalendarPageProvider :page="data.page">
+				<CalendarSlot name="nav">
+					<CalendarNav />
+				</CalendarSlot>
+			</CalendarPageProvider>
+		</template>
+	</Popover>
 </template>
 
 <script setup lang="ts">

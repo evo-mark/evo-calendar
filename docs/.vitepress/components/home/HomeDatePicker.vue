@@ -24,7 +24,7 @@
         <BaseTabPanels>
           <BaseTabPanel v-for="{ panel, summary } in calendarTabs">
             <HomeTabPanel :summary="summary">
-              <component v-if="panel" :is="panel" />
+              <component :is="panel" v-if="panel" />
             </HomeTabPanel>
           </BaseTabPanel>
         </BaseTabPanels>

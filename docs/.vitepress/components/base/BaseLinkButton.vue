@@ -11,8 +11,8 @@
   >
     <span><slot /></span>
     <Component
-      v-if="icon"
       :is="icon"
+      v-if="icon"
       class="w-4 h-4"
       :class="
         accent

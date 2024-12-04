@@ -1,5 +1,5 @@
 <template>
-  <VDatePicker v-model="date" color="indigo" ref="picker">
+  <VDatePicker ref="picker" v-model="date" color="indigo">
     <template #footer>
       <div class="w-full px-3 pb-3">
         <button

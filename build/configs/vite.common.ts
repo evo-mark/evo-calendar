@@ -39,7 +39,6 @@ const rollupOptions: RollupOptions = {
 const rollupMjsBuildOptions: RollupOptions = {
   input: path.resolve(process.cwd(), 'src/index.ts'),
   output: {
-    sourcemap: true,
     dir: 'dist/mjs',
     format: 'esm',
     entryFileNames: '[name].mjs',

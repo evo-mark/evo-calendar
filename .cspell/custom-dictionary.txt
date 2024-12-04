@@ -1,0 +1,7 @@
+# Custom Dictionary Words
+datepicker
+popover
+popovers
+popperjs
+trivago
+vuejs

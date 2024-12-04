@@ -2,15 +2,15 @@
   <BaseField>
     <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
       <div
-        class="flex space-x-2 hover:cursor-pointer text-sm font-medium hover:text-gray-500"
         v-for="option in opts"
         :key="option.value"
+        class="flex space-x-2 hover:cursor-pointer text-sm font-medium hover:text-gray-500"
       >
         <input
+          :id="option.id"
           v-model="value"
           type="radio"
           :value="option.value"
-          :id="option.id"
           class="hover:cursor-pointer"
           @click.stop
         />

@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center">
     <div class="space-y-2 mb-4">
       <!--Date Display (ISO)-->
-      <div class="flex space-x-6" v-if="!isRange">
+      <div v-if="!isRange" class="flex space-x-6">
         <BaseField label="Value:"
           >{{ dateRaw(value) }}
           <span v-if="dateType(value)"
@@ -39,7 +39,7 @@
     </div>
     <!--Date Picker-->
     <VDatePicker v-bind="$attrs">
-      <template v-for="(index, name) in $slots" v-slot:[name]="props">
+      <template v-for="(index, name) in $slots" #[name]="props">
         <slot :name="name" v-bind="props" />
       </template>
     </VDatePicker>

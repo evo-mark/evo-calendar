@@ -1,7 +1,7 @@
 <template>
   <div class="form-check form-switch">
     <label class="relative inline-flex items-center cursor-pointer">
-      <input type="checkbox" v-model="value" class="sr-only peer" />
+      <input v-model="value" type="checkbox" class="sr-only peer" />
       <div
         :class="`w-11 h-6 bg-gray-200 peer-focus:outline-none
         peer-focus:ring-4 peer-focus:ring-blue-300

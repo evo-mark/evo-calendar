@@ -1,9 +1,5 @@
 <template>
-  <CalendarCell
-    :cell="cell"
-    :class="[`is-${size}`, `is-${fill}`]"
-    :style="style"
-  />
+	<CalendarCell :cell="cell" :class="[`is-${size}`, `is-${fill}`]" :style="style" />
 </template>
 
 <script setup lang="ts">
@@ -16,7 +12,7 @@ import { roundTenth } from '../../utils/helpers';
 import CalendarCell from './CalendarCell.vue';
 
 const props = defineProps<{
-  cell: DateRangeCell<Event>;
+	cell: DateRangeCell<Event>;
 }>();
 
 const { pixelsPerHour } = useCalendarGrid();
@@ -24,33 +20,30 @@ const { pixelsPerHour } = useCalendarGrid();
 const event = computed(() => props.cell.data);
 
 const position = computed(() => {
-  const { startTime } = props.cell;
-  const yHours = startTime / MS_PER_HOUR;
-  return Math.max(roundTenth(yHours * pixelsPerHour.value), 0);
+	const { startTime } = props.cell;
+	const yHours = startTime / MS_PER_HOUR;
+	return Math.max(roundTenth(yHours * pixelsPerHour.value), 0);
 });
 
 const height = computed(() => {
-  const { startTime, endTime } = props.cell;
-  const heightHours = (endTime - startTime) / MS_PER_HOUR;
-  const fullHeight = 24 * pixelsPerHour.value;
-  return Math.max(
-    Math.min(heightHours * pixelsPerHour.value, fullHeight - position.value),
-    0,
-  );
+	const { startTime, endTime } = props.cell;
+	const heightHours = (endTime - startTime) / MS_PER_HOUR;
+	const fullHeight = 24 * pixelsPerHour.value;
+	return Math.max(Math.min(heightHours * pixelsPerHour.value, fullHeight - position.value), 0);
 });
 
 const size = computed(() => {
-  if (height.value <= 16) return '2xs';
-  if (height.value <= 30) return 'xs';
-  if (height.value <= 48) return 'sm';
-  return 'md';
+	if (height.value <= 16) return '2xs';
+	if (height.value <= 30) return 'xs';
+	if (height.value <= 48) return 'sm';
+	return 'md';
 });
 
 const style = computed(() => {
-  return {
-    top: `${position.value}px`,
-    height: `${height.value}px`,
-  };
+	return {
+		top: `${position.value}px`,
+		height: `${height.value}px`,
+	};
 });
 
 const fill = computed(() => event.value.fill);

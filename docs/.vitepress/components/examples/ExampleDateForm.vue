@@ -11,7 +11,7 @@
       >
       <div class="flex w-full">
         <VDatePicker v-model="date" :popover="popover">
-          <template v-slot="{ inputValue, inputEvents }">
+          <template #default="{ inputValue, inputEvents }">
             <input
               id="date"
               class="px-2 py-1 bg-white border border-gray-300 rounded-l focus:outline-none focus:border focus:ring-2 dark:bg-gray-700 dark:border-gray-500"
@@ -32,12 +32,12 @@
         </button>
       </div>
       <p
-        class="text-red-600 dark:text-red-400 text-xs italic mt-1"
         v-if="errorMessage"
+        class="text-red-600 dark:text-red-400 text-xs italic mt-1"
       >
         {{ errorMessage }}
       </p>
-      <p class="text-blue-500 text-xs font-bold mt-1" v-else>
+      <p v-else class="text-blue-500 text-xs font-bold mt-1">
         We got it. Thanks!
       </p>
     </form>
